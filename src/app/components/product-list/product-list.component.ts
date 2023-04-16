@@ -17,7 +17,6 @@ export class ProductListComponent implements OnInit {
     private router: Router
   ) {}
 
-
   ngOnInit(): void {
 
   }
