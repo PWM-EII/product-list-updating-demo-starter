@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-6  ">
+
+    <h2>Shopping List</h2>
+
+    <p *ngIf="products.length === 0 else productlist">Empty list</p>
+
+    <ng-template #productlist>
+      <table>
+
+        <thead>
+        <tr>
+          <th>ID&nbsp;&nbsp;</th>
+          <th>Name</th>
+          <th>Price&nbsp;&nbsp;</th>
+          <th>Units&nbsp;&nbsp;</th>
+          <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}&nbsp;&nbsp;</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.stock }}</td>
+          <td><button  test-data="delete"
+               (click)="delete(product)">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+
+      <p>Total:{{ total }}</p>
+    </ng-template>
+  </div>
+</div>

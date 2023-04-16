@@ -1,0 +1,18 @@
+<div class="row m-2">
+  <div class="col-4  ">
+
+    <h1>{{ product.name }}</h1>
+
+    <p>{{ product.description }}</p>
+    <p>Price:&nbsp;{{ product.price }}</p>
+    <p>Stock:&nbsp;{{ product.stock }}</p>
+
+    <form *ngIf="product.stock > 0" (submit)="onSubmit()">
+      <label>Units:&nbsp;</label>
+      <input type="number" name="units" [(ngModel)]="units">
+
+      <button type="submit" [disabled]="units > product.stock">Buy</button>
+    </form>
+
+  </div>
+</div>
