@@ -34,12 +34,10 @@ describe('ProductListComponent', () => {
       [
         {
           id: 1, name: 'Product 1',
-          description: 'Description Product 1',
           price: 10, stock: 5
         },
         {
           id: 2, name: 'Product 2',
-          description: 'Description Product 2',
           price: 20, stock: 10
         },
       ]
@@ -68,7 +66,6 @@ describe('ProductListComponent', () => {
       jest.spyOn(component['router'], 'navigate');
     const product: Product = {
       id: 1, name: 'Product 1',
-      description: 'Description Product 1',
       price: 10, stock: 5
     };
 
@@ -82,7 +79,6 @@ describe('ProductListComponent', () => {
 
     const product: Product = {
       id: 1, name: 'Product 1',
-      description: 'Description Product 1',
       price: 10, stock: 5
     };
 

@@ -25,4 +25,10 @@ export class ShoppingListComponent implements OnInit {
 
   }
 
+  private calculateTotal() {
+    this.total = 0
+    this.products.forEach(product => {
+      this.total = this.total +  product.price * product.stock;
+    })
+  }
 }

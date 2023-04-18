@@ -26,9 +26,9 @@ describe('ShoppingListComponent', () => {
   test('should calculate total correctly', () => {
     const shoppingService = TestBed.inject(ShoppingService);
     const products: Product[] = [
-      { id: 1, name: 'Product 1', description: 'Description 1', price: 10, stock: 2 },
-      { id: 2, name: 'Product 2', description: 'Description 2', price: 15, stock: 3 },
-      { id: 3, name: 'Product 3', description: 'Description 3', price: 20, stock: 4 }
+      { id: 1, name: 'Product 1', price: 10, stock: 2 },
+      { id: 2, name: 'Product 2', price: 15, stock: 3 },
+      { id: 3, name: 'Product 3', price: 20, stock: 4 }
     ];
 
     shoppingService.products = products;
@@ -47,8 +47,8 @@ describe('ShoppingListComponent', () => {
   test('should display products correctly', () => {
     const shoppingService = TestBed.inject(ShoppingService);
     const products: Product[] = [
-      { id: 1, name: 'Product 1', description: 'Description 1', price: 10, stock: 2 },
-      { id: 2, name: 'Product 2', description: 'Description 2', price: 15, stock: 3 },
+      { id: 1, name: 'Product 1', price: 10, stock: 2 },
+      { id: 2, name: 'Product 2', price: 15, stock: 3 },
     ];
 
     shoppingService.products = products;
@@ -78,7 +78,6 @@ describe('ShoppingListComponent', () => {
 
     const product: Product = {
       id: 1, name: 'Product 1',
-      description: 'Description 1',
       price: 10, stock: 1
     };
 

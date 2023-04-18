@@ -28,7 +28,6 @@ describe('ProductDetailComponent', () => {
       getProductById: jest.fn().mockReturnValue({
         id: 1,
         name: 'Product 1',
-        description: 'Description 1',
         price: 100,
         stock: 8
       }),
@@ -66,7 +65,6 @@ describe('ProductDetailComponent', () => {
     expect(component.product).toEqual({
       id: 1,
       name: 'Product 1',
-      description: 'Description 1',
       price: 100,
       stock: 8
     });
@@ -82,7 +80,6 @@ describe('ProductDetailComponent', () => {
     expect(mockShoppingService.addProduct).toHaveBeenCalledWith({
       id: 1,
       name: 'Product 1',
-      description: 'Description 1',
       price: 100,
       stock: 5
     });
@@ -90,7 +87,6 @@ describe('ProductDetailComponent', () => {
     expect(mockProductService.updateProduct).toHaveBeenCalledWith({
       id: 1,
       name: 'Product 1',
-      description: 'Description 1',
       price: 100,
       stock: 3
     });
@@ -102,7 +98,6 @@ describe('ProductDetailComponent', () => {
     mockShoppingService.getProductById.mockReturnValue({
       id: 1,
       name: 'Product 1',
-      description: 'Description 1',
       price: 100,
       stock: 2
     });
@@ -114,7 +109,6 @@ describe('ProductDetailComponent', () => {
     expect(mockShoppingService.updateProduct).toHaveBeenCalledWith({
       id: 1,
       name: 'Product 1',
-      description: 'Description 1',
       price: 100,
       stock: 5
     });

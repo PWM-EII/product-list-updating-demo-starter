@@ -11,7 +11,7 @@ import {ShoppingService} from "../../services/shopping.service";
 })
 export class ProductDetailComponent implements OnInit {
 
-  product: Product = { id: 0, name: '', description: '', price: 0, stock: 0 };
+  product: Product = { id: 0, name: '', price: 0, stock: 0 };
   units = 0;
 
   constructor(
@@ -28,6 +28,7 @@ export class ProductDetailComponent implements OnInit {
 
   onSubmit() {
 
+    this.router.navigate([`/products/`]);
   }
 
 }
